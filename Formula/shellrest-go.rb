@@ -26,20 +26,13 @@ class ShellrestGo < Formula
   end
 
   def install
-    if OS.mac?
-      if Hardware::CPU.arm?
-        bin.install "shellrest-go_darwin_arm64" => "shellrest-go"
-      else
-        bin.install "shellrest-go_darwin_amd64" => "shellrest-go"
-      end
-    else
-      if Hardware::CPU.arm?
-        bin.install "shellrest-go_linux_arm64" => "shellrest-go"
-      else
-        bin.install "shellrest-go_linux_amd64" => "shellrest-go"
-      end
-    end
-
+    target = case
+             when OS.mac? && Hardware::CPU.arm? then "shellrest-go_darwin_arm64"
+             when OS.mac? then "shellrest-go_darwin_amd64"
+             when Hardware::CPU.arm? then "shellrest-go_linux_arm64"
+             else "shellrest-go_linux_amd64"
+             end
+    bin.install target => "shellrest-go"
     (etc/"shellrest").mkpath
     conf = etc/"shellrest/sshrest.conf"
     unless conf.exist?
