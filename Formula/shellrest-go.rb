@@ -1,27 +1,27 @@
 class ShellrestGo < Formula
   desc "Async SSH-like REST API (SSH over HTTP) with async jobs and Bearer auth"
   homepage "https://github.com/zk-armor/shellrest-go"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.1/shellrest-go_darwin_arm64.tar.gz"
-      sha256 "3b580fb15617a5c6b5da70c9e91f095198ba95620b44f72c46ee459389aa9c49"
+      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.2/shellrest-go_darwin_arm64.tar.gz"
+      sha256 "21394e669ae4884f8ed872f7bf79c18ee8fc1adbdca51d04993a6aad199de11b"
     end
     on_intel do
-      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.1/shellrest-go_darwin_amd64.tar.gz"
-      sha256 "4f95ae2c59d265b3fa66af1f15ec593cf0176ec4436c01c4e6e87adf287f88cd"
+      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.2/shellrest-go_darwin_amd64.tar.gz"
+      sha256 "319308666956085540dc4baa5de92a649b4826aa889f2ef5f10457403254f173"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.1/shellrest-go_linux_arm64.tar.gz"
-      sha256 "8e5953ba4b9d214c40a6a2ea64b8ceee668a4608da6838d8d7a1f5ea01ca301b"
+      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.2/shellrest-go_linux_arm64.tar.gz"
+      sha256 "ea5b95b1859092642548cc48aa6095d9f4429d29ab6cc750da50d1fe5ce9ca7f"
     end
     on_intel do
-      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.1/shellrest-go_linux_amd64.tar.gz"
-      sha256 "d20478edb1565ce3378781ad53270742b07f73f4b48ce7967a0edc361509e7f5"
+      url "https://github.com/zk-armor/shellrest-go/releases/download/v0.1.2/shellrest-go_linux_amd64.tar.gz"
+      sha256 "0e25b7544278a2ae0ed8cd69792fb2852dacce0d2aade617ad5750c57a30fd7c"
     end
   end
 
