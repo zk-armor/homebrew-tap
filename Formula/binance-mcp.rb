@@ -1,10 +1,10 @@
 class BinanceMcp < Formula
   desc "MCP server exposing Binance read-only tools"
   homepage "https://github.com/zk-armor/cursor-trader"
-  url "https://github.com/zk-armor/homebrew-tap/releases/download/v0.1.1/binance_mcp-0.1.0.tar.gz"
-  sha256 "cff7de5d3c99cd3b0884e51d46d95e24a79a8f1ed0263edb87fa6f887766dacd"
+  url "https://github.com/zk-armor/homebrew-tap/releases/download/v0.1.2/binance_mcp-0.1.2.tar.gz"
+  sha256 "d76c04d25642f8d3b950159f20bd250135782679c4d98df6827d7cbe4be6979b"
   license "MIT"
-  version "0.1.1"
+  version "0.1.2"
 
   depends_on "uv"
 
