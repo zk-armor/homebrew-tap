@@ -2,42 +2,54 @@
 
 This is a Homebrew tap for zk-armor's custom formulas.
 
-## Quickstart Installation
+## One-Liner Installation
 
-You can use the `zkLaunch` script to install Homebrew, tap this repository, and install formulas all in one command.
+The `zkLaunch` script is the recommended way to get started. It can install Homebrew, tap this repository, and install any formula (from this tap or official ones) in a single command.
 
-### Basic Usage
+The script is available at `https://is.gd/zkLaunch`.
 
-To install the `gemini-box` formula:
+### Usage
+
+The script passes the `--formulas` argument directly to `brew install`. You can specify multiple formulas, separated by commas.
+
+**Important:** To install formulas from this tap, you must use the full name: `zk-armor/tap/<formula_name>`.
+
+### Example 1: Install a mix of formulas
+
+This command installs `git` (official formula) and `gemini-box` (from this tap).
+
 ```bash
-curl -sSL https://is.gd/zkLaunch | bash -s -- --formulas gemini-box
+curl -sSL https://is.gd/zkLaunch | bash -s -- --formulas=git,zk-armor/tap/gemini-box
 ```
 
-### Advanced Usage
+### Example 2: Install only a native formula
 
-The installation script accepts further arguments to customize the setup.
-
-*   `--formulas <formula1,formula2>`: A comma-separated list of formulas to install from this tap.
-*   `--brew-path <path>` or `--brew-path=<path>`: Sets a custom installation path for Homebrew.
-
-**Example:** Install `gemini-box` and set a custom Homebrew path.
 ```bash
-curl -sSL https://is.gd/zkLaunch | bash -s -- --formulas=gemini-box --brew-path=/opt/homebrew
+curl -sSL https://is.gd/zkLaunch | bash -s -- --formulas=node
+```
+
+### Example 3: Customize Homebrew path
+
+You can also specify a custom installation directory for Homebrew itself.
+
+```bash
+curl -sSL https://is.gd/zkLaunch | bash -s -- --formulas=git --brew-path=/content/my-brew
 ```
 
 ## Manual Installation
 
-If you already have Homebrew installed, you can tap this repository directly:
+If you already have Homebrew, tap this repository to get access to the formulas:
 
 ```bash
 brew tap zk-armor/homebrew-tap
 ```
 
-Then, you can install any of the available formulas.
-
 ### Available Formulas
 
-*   `gemini-box`: A portable, self-contained "box" for the Google Gemini CLI.
+*   **gemini-box**
     ```bash
+    # Install after tapping
     brew install gemini-box
+    # Or install directly
+    brew install zk-armor/tap/gemini-box
     ```
